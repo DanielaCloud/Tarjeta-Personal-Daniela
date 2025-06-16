@@ -1,0 +1,151 @@
+/* Custom Properties - Variables
+
+ Son datos que se guardan en el root, para reutilizarse a lo largo del código.
+
+ El root es el elemento de CSS que guarda las propiedades personalizadas y que podemos usar en el código.
+
+ Sintaxis: 
+
+ :root {
+   --nombre-variable: valor; 
+}
+  
+  Para usar variables en las propiedades usamos la "funcuion" llamada: 
+  propiedad: var(nombre de la variable); 
+*/
+
+:root {
+  --base: #FF668B;
+  --highlight: #EFA9BA;
+  --shadow: #DB3D63;
+  --white: #F5EDEF;
+  --black: #0D0809;
+
+
+  --shadow-icon: 0 3px 3px 0 #2f195c1c;
+
+  --padding-n: 1rem; /* 16px */
+  --padding-s: .75rem;
+  --pading-xs: .5rem;
+
+  --font-sixe-n: 1rem; 
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--base);
+  padding: var(--padding-n)
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+button {
+  border: none;
+}
+
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 1200px;
+   background-color: var(--white);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-n);
+}
+
+.brand {
+  max-width: 130px;
+}
+
+.icon {
+  padding: var(--pading-xs);
+  border-radius: 8px;
+  background-color: var(--white);
+  box-shadow: var(--shadow-icon);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-n);
+  gap: 1rem;
+}
+
+.main div:first-child {
+  border-radius: 50%;
+  overflow: hidden;
+  max-width: 350%;
+}
+
+.main div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem; 
+}
+
+.main h1 {
+  text-align: center;
+  color: var(--base);
+  font-size: 2.25rem; /* 36 / 16 px =2.25rem */
+  line-height: 2.25rem;
+}
+
+.main p {
+  text-align: center;
+  font-size: .75rem;
+  line-height: 1.125rem;
+  background-color: var(--highlight);
+}
+
+.main a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  gap: 0.5rem;
+  padding: var(--pading-xs) var(--padding-n);
+  border-radius: 2rem;
+  background-color: var(--base);
+  color: var(--white);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-n);
+}
+
+.footer div {
+  display: flex;
+  gap: 1rem;
+}
+
+. footer
